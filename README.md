@@ -3,7 +3,7 @@
 
 ## 🤔 Sobre o projeto
 <hr>
-Um simples aplicativo da web de lembranças de ferramentas utilizando usando Django.
+Um simples aplicativo web de lembranças de ferramentas utilizando Django.
 
 ## Iniciar projeto
 <hr>
