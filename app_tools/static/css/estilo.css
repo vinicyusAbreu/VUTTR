@@ -1,0 +1,175 @@
+html {
+    font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    background: #020631;
+    color: white;
+    font-size: 1.6rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.principal {
+    width: 750px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 5rem;
+    letter-spacing: .5rem;
+    cursor: pointer;
+}
+
+.titulo p {
+    font-size: 2rem;
+}
+
+.formularios {
+    margin-top: 3rem;
+}
+
+.container-btn {
+    text-align: right;
+}
+
+#search {
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.6rem;
+}
+
+.container-conteudo {
+    margin-top: 3rem;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* SCROLLBAR */
+
+
+/* Let's get this party started */
+
+.container-conteudo::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+.container-conteudo::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+    border: 4px solid transparent;
+    background-clip: content-box;
+    /* THIS IS IMPORTANT */
+}
+
+
+/* Handle */
+
+.container-conteudo::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.conteudo {
+    background-color: whitesmoke;
+    padding: 1rem;
+    -webkit-box-shadow: 1px 1px 14px -1px #000000;
+    box-shadow: 1px 1px 2px 3px #000000;
+}
+
+.conteudo-titulo h2 a {
+    font-size: 2.2rem;
+}
+
+.remover {
+    font-size: 1.3rem;
+}
+
+.corpo-conteudo p {
+    color: #080808;
+    margin-bottom: .5rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    color: #080808;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.mark {
+    background-color: hsla(33, 100%, 50%, 0.589);
+}
+
+.modal {
+    color: #080808;
+}
+
+.modal-header h5 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.modal .btn {
+    font-size: 1.6rem;
+}
+
+.modal label {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.modal input,
+.modal textarea {
+    font-size: 1.6rem;
+}
+
+.close span {
+    font-size: 3rem;
+}
+
+.markDelete {
+    font-weight: bold;
+}
+
+.spinner {
+    height: 400px;
+}

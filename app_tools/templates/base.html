@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VUTTR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+
+<body>
+
+    <main class="principal">
+        <div class="container">
+            <div class="titulo">
+                <h1 id="home">VUTTR</h1>
+                <p>Very Useful Tools to Remember</p>
+            </div>
+
+
+
+            <div class="formularios row ">
+
+                <form class="col-md-8 form-inline justify-content-between" method="GET" id="form_search"  action="{% url 'search' %}">
+                    {% csrf_token %}
+                    <input type="search" class="form-control mr-2" name="searchName" id="search" placeholder="🔍 Search">
+
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="show" id="show" name="searchTag">
+                        <label class="form-check-label ml-2" for="show">
+                             Search in tags only
+                        </label>
+                    </div>
+
+                </form>
+
+                <div class="col-md-4 container-btn">
+                    <button type="button" class="btn btn-primary btn-lg text-center" data-toggle="modal" data-target="#modalAdd">➕ Add</button>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="container-conteudo">
+
+            </div>
+
+
+          
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered" role="document">
+
+                <div class="modal-content">
+
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">➕ Add new tool</h5>
+                        <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    </div>
+
+                    <div class="modal-body border-0 pl-5 pr-5">
+
+                        <form method="POST" id="formTool" action="{% url 'json_form' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="toolName">Tool Name</label>
+                                <input type="text" class="form-control" id="toolName" placeholder="Enter a Tool name..." name="toolName">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="toolLink">Tool Link</label>
+                                <input type="url" class="form-control" id="toolLink" placeholder="Enter a link.." name="toolLink">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="toolDescription">Tool description</label>
+                                <textarea class="form-control" id="toolDescription" rows="3" name="toolDescription"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="toolLink">Tags</label>
+                                <input type="text" class="form-control" id="tags" placeholder="Enter a tags.." name="tags">
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-success" id="sendForm">Add tool</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+    
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+     <script src="{% static 'javascript/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'javascript/app.js' %}" async defer></script>
+</body>
+
+</html>
