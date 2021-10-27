@@ -5,6 +5,10 @@
 <hr>
 Um simples aplicativo da web de lembranças de ferramentas utilizando usando Django.
 
+## ✨ Demonstração
+Veja abaixo um gif do projeto.<br>
+[![Image from Gyazo](https://i.gyazo.com/4d54cb4e44000648ff3aa63ebdd55615.gif)](https://gyazo.com/4d54cb4e44000648ff3aa63ebdd55615)
+
 ## Iniciar projeto
 <hr>
 
